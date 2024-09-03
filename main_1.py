@@ -4,55 +4,6 @@ import unittest
 from unittest import TestCase
 
 
-# class TournamentTest(TestCase):
-#     all_results = {}
-#
-#     @classmethod
-#     def setUpClass(cls):
-#         cls.all_results = {}
-#
-#     def setUp(self):
-#         self.runners = [
-#             Runner("Usain", 10),
-#             Runner("Andrew", 9),
-#             Runner("Nick", 3),
-#         ]
-#
-#     @classmethod
-#     def tearDownClass(cls):  # исправлено на cls вместо self
-#         for key, value in cls.all_results.items():
-#             print("{}:".format(key))
-#             print("{}: {}".format(key, value))
-#
-#     def test_usain_and_nick(self):
-#         tournament = Tournament(90, self.runners[0], self.runners[2])
-#         result = tournament.start()
-#         self.assertTrue(list(result.values())[-1].name == "Nick")
-#         self.all_results["Результат первого забега"] = result
-#     def test_andrey_and_nick(self):
-#         tournament = Tournament(90, self.runners[1], self.runners[2])
-#         result = tournament.start()
-#         self.assertTrue(list(result.values())[-1].name == "Nick")
-#         self.all_results["Результат второго забега"] = result
-#     def test_usain_andrey_nick(self):
-#         tournament = Tournament(90, *self.runners)
-#         result = tournament.start()
-#         self.assertTrue(list(result.values())[-1].name == "Nick")
-#         self.all_results["Результат третьего забега"] = result
-#
-#     def test_usain_and_nick(self):
-#         distance = 5
-#         tournament = Tournament(90, *self.runners)
-#         result = tournament.start()
-#         self.assertTrue(list(result.values())[-1].name == "Nick")
-#         self.all_results["Результат 4 забега"] = result
-#
-#
-#
-# if __name__ == "__main__":
-#     unittest.main()
-
-
 class TournamentTest(unittest.TestCase):
 
     @classmethod
